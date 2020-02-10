@@ -1,2 +1,2 @@
 # Projects
-All of my academic and fun project
+All of my academic and fun projects
