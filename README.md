@@ -1,2 +1,2 @@
-# Projects
-All of my academic and fun projects
+# Thesis
+Thesis code along with data for under graduation
