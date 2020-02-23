@@ -19,10 +19,13 @@ def get_single_item_data(item_url):
     for item_name in soup.findAll('h1', {'class': 'title mb10'}):
         ln=w_sheet.nrows
         #loop to check 100 recent entries against the present news to avoid redundancy
-        for i in range(ln-100,ln):
+        recent = ln-100
+        if recent < 0:
+            recent = 0
+        for i in range(recent,ln):
           str=w_sheet.cell_value(i,0)  
           if(item_name.text==str):
-              return
+              return       
         
         print(item_name.text)
         cpy_sheet.write(count, 0, item_name.text)
